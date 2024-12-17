@@ -1,0 +1,75 @@
+{
+  "namespace": "horse",
+
+  "renderer_bg": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "overlay_image": {
+    "color": "$server_theme_slot_icon_color"
+  },
+
+  "horse_label": {
+    "color": "$server_theme_title_color"
+  },
+
+  "horse_grid_item@common_colorful.container_item": {
+    "$background_images": "common_colorful.cell_image_panel"
+  },
+
+  "equip_grid": {
+    "grid_item_template": "@horse.horse_grid_item"
+  },
+
+  "inv_grid": {
+    "grid_item_template": "@horse.horse_grid_item"
+  },
+
+  "inv_bg_panel": {
+    "controls": [
+      { "cell_image@common_colorful.cell_image": { } }
+    ]
+  },
+
+  "horse_panel": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+      { "selected_item_details_factory@common.selected_item_details_factory": {} },
+      { "item_lock_notification_factory@common.item_lock_notification_factory": {} },
+      {
+        "root_panel@common.root_panel": {
+          "layer": 1,
+          "controls": [
+            {
+              "common_panel@common.common_panel": {
+                "$use_compact_close_button": true,
+                "$dialog_background": "common_colorful.inventory_background"
+              }
+            },
+
+            { "horse_section_label@horse.horse_label": {} },
+            { "inv_panel@horse.inv_panel": {} },
+
+            {
+              "equipment@horse.equip_panel": {
+                "offset": [ 7, 18 ]
+              }
+            },
+            {
+              "renderer@horse.horse_renderer": {
+                "offset": [ 25, 18 ]
+              }
+            },
+
+            { "inventory_panel_bottom_half_with_label@common_colorful.inventory_panel_bottom_half_with_label": {} },
+            { "hotbar_grid_template@common_colorful.hotbar_grid_template": {} },
+            { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+            { "gamepad_cursor@common.gamepad_cursor_button": {} }
+          ]
+        }
+      },
+      { "flying_item_renderer@common.flying_item_renderer": { "layer": 10 } }
+    ]
+  }
+}

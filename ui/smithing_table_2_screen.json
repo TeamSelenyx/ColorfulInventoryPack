@@ -1,0 +1,69 @@
+{
+  "namespace": "smithing_table_2",
+
+  "upgrade_label": {
+    "color": "$server_theme_title_color",
+    "shadow": true
+  },
+
+  "smithing_image": {
+    "color": "$server_theme_slot_icon_color"
+  },
+
+  "smithing_table_item_slot": {
+    "type": "panel",
+    "controls": [
+      {
+        "container_item@common_colorful.container_item": {
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "$hover_text_max_width": 500,
+
+          "$background_images": "common_colorful.cell_image_panel"
+        }
+      }
+    ]
+  },
+
+  "toolbar_background": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "smithing_table_panel": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+      { "selected_item_details_factory@common.selected_item_details_factory": {} },
+      { "item_lock_notification_factory@common.item_lock_notification_factory": {} },
+      {
+        "root_panel@common.root_panel": {
+          "layer": 1,
+          "controls": [
+            {
+              "common_panel@common.common_panel": {
+                "$show_close_button": false,
+                "$dialog_background": "common_colorful.inventory_background"
+              }
+            },
+            {
+              "smithing_table_screen_inventory": {
+                "type": "panel",
+                "layer": 2,
+                "controls": [
+                  { "top_half_panel@smithing_table_2.top_half_panel": {} },
+                  { "inventory_panel_bottom_half_with_label@common_colorful.inventory_panel_bottom_half_with_label": {} },
+                  { "hotbar_grid@common_colorful.hotbar_grid_template": {} },
+                  { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }
+                ]
+              }
+            },
+            { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+            { "toolbar_anchor@smithing_table_2.toolbar_anchor": {} },
+            { "gamepad_cursor@common.gamepad_cursor_button": {} }
+          ]
+        }
+      },
+      { "flying_item_renderer@common.flying_item_renderer": { "layer": 15 } }
+    ]
+  }
+}

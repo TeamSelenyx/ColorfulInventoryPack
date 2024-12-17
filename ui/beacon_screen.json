@@ -1,0 +1,172 @@
+{
+  "namespace": "beacon",
+
+  "beacon_panel": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+      {
+        "selected_item_details_factory@common.selected_item_details_factory": {
+          "control_name": "@beacon.selected_item_details"
+        }
+      },
+      { "item_lock_notification_factory@common.item_lock_notification_factory": {} },
+      {
+        "root_panel@common.root_panel": {
+          "layer": 1,
+          "size": [ 256, 219 ],
+          "controls": [
+            { "common_panel@common.common_panel": { "$dialog_background": "common_colorful.inventory_background" } },
+            {
+              "beacon_inventory": {
+                "type": "panel",
+                "controls": [
+                  {
+                    "beacon_inner_panel@beacon.beacon_inner_panel": {
+                      "offset": [ 0, 4 ],
+                      "layer": 2
+                    }
+                  },
+                  {
+                    "payment_panel@beacon.payment_panel": {
+                      "offset": [ 0, 8 ],
+                      "layer": 2
+                    }
+                  },
+                  {
+                    "inventory_panel_bottom_half@common_colorful.inventory_panel_bottom_half": {
+                      "layer": 2,
+                      "$button_ref": "beacon.inventory_slot_button"
+                    }
+                  },
+                  {
+                    "hotbar_grid_template@common_colorful.hotbar_grid_template": {
+                      "$button_ref": "beacon.hotbar_slot_button"
+                    }
+                  },
+                  { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+                  { "gamepad_cursor@common.gamepad_cursor_button": {} }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      { "flying_item_renderer@common.flying_item_renderer": { "layer": 12 } }
+    ]
+  },
+
+  "item_seperator": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "button_unchecked_default": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "button_unchecked_hover": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "button_checked_hover": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "button_locked": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "button_locked_hover": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "button_checked": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "base_button/default": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "base_button/hover": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "base_button/pressed": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "inactive_button/default": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "inactive_button/hover": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "selected_button/default": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "selected_button/hover": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "payment_panel": {
+    "type": "panel",
+    "size": [ "100%", 22 ],
+    "controls": [
+      {
+        "confirm_panel@beacon.panel_template": {
+          "offset": [ 48, 0 ],
+          "$button_name": "confirm",
+          "$image_texture": "textures/ui/confirm",
+          "$image_size": [ 14, 12 ],
+          "$button_control": "beacon.button_template",
+          "anchor_from": "center",
+          "anchor_to": "left_middle"
+        }
+      },
+      {
+        "cancel_panel@beacon.panel_template": {
+          "offset": [ 74, 0 ],
+          "$button_name": "cancel",
+          "$image_texture": "textures/ui/cancel",
+          "$image_size": [ 13, 13 ],
+          "$button_control": "beacon.button_template",
+          "anchor_from": "center",
+          "anchor_to": "left_middle"
+        }
+      },
+      {
+        "ingredient_item@common_colorful.container_item": {
+          "$item_collection_name": "beacon_payment_items",
+          "offset": [ 19, 0 ],
+          "anchor_from": "center",
+          "anchor_to": "left_middle",
+          "$background_images": "common_colorful.cell_image_panel"
+        }
+      },
+      {
+        "usable_items_panel@beacon.usable_items_panel": {
+          "offset": [ 8, 0 ],
+          "anchor_from": "center",
+          "anchor_to": "right_middle"
+        }
+      }
+    ]
+  },
+
+  "beacon_label": {
+    "color": "$server_theme_title_color",
+    "shadow": true
+  },
+
+  "beacon_inner_panel": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "beacon_inner_panel/middle_strip": {
+    "color": "$server_theme_ui_color"
+  }
+}

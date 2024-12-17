@@ -1,0 +1,84 @@
+{
+  "namespace": "stonecutter",
+
+  "stonecutter_label": {
+    "color": "$server_theme_title_color"
+  },
+
+  "stone_cell_image": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "container_cell_image": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "toolbar_background": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "highlight_slot_panel/highlight": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "highlight_slot_panel/white_border": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "scroll_panel": {
+    "$scroll_background_image_control": "common_colorful.container_scroll_background_image"
+  },
+
+  "stone_book_panel/bg": {
+    "$dialog_background": "common_colorful.inventory_background"
+  },
+
+  "input_item_slot@common_colorful.container_item": {
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "$item_collection_name": "stonecutter_input_items",
+    "$background_images": "common_colorful.cell_image_panel"
+  },
+
+  "result_item_slot@common_colorful.container_item": {
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "$item_collection_name": "stonecutter_result_items",
+    "$button_ref": "stonecutter.result_slot_button",
+    "$cell_image_size": [ 26, 26 ],
+    "size": [ 26, 26 ],
+    "$background_images": "common_colorful.cell_image_panel"
+  },
+
+  "right_panel@common.root_panel": {
+    "layer": 1,
+    "controls": [
+      {
+        "common_panel@common.common_panel": {
+          "$show_close_button": false,
+          "$dialog_background": "common_colorful.inventory_background"
+        }
+      },
+      {
+        "stonecutter_screen_inventory": {
+          "type": "panel",
+          "layer": 2,
+          "controls": [
+            {
+              "stonecutter_label@stonecutter.stonecutter_label": {
+                "offset": [ 0, 5 ]
+              }
+            },
+            { "top_half_panel@stonecutter.top_half_panel": {} },
+            { "inventory_panel_bottom_half_with_label@common_colorful.inventory_panel_bottom_half_with_label": {} },
+            { "hotbar_grid@common_colorful.hotbar_grid_template": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "center_fold/center_bg": {
+    "color": "$server_theme_ui_color"
+  }
+}

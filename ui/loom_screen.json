@@ -1,0 +1,110 @@
+{
+  "namespace": "loom",
+
+  "loom_label": {
+    "color": "$server_theme_title_color",
+    "shadow": true
+  },
+
+  "pattern_cell_image": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "container_cell_image": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "banner_outline": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "item_empty_image": {
+    "color": "$server_theme_slot_icon_color"
+  },
+
+  "toolbar_background": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "highlight_slot_panel/highlight": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "highlight_slot_panel/white_border": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "scroll_panel": {
+    "$scroll_background_image_control": "common_colorful.container_scroll_background_image"
+  },
+
+  "pattern_book_panel/bg": {
+    "$dialog_background": "common_colorful.inventory_background"
+  },
+
+  "input_item_slot@common_colorful.container_item": {
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "$item_collection_name": "loom_input_items",
+    "$cell_overlay_ref": "loom.banner_empty_image",
+    "$background_images": "common_colorful.cell_image_panel"
+  },
+
+  "dye_item_slot@common_colorful.container_item": {
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "$item_collection_name": "loom_dye_items",
+    "$cell_overlay_ref": "loom.dye_empty_image",
+    "$background_images": "common_colorful.cell_image_panel"
+  },
+
+  "material_item_slot@common_colorful.container_item": {
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "$item_collection_name": "loom_material_items",
+    "$cell_overlay_ref": "loom.pattern_item_empty_image",
+    "$item_renderer_binding_condition": "always_when_visible",
+    "$background_images": "loom.container_cell_image",
+    "$cell_images_binding_condition": "always_when_visible"
+  },
+
+  "result_item_slot@common_colorful.container_item": {
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "$item_collection_name": "loom_result_items",
+    "$button_ref": "loom.result_slot_button",
+    "$background_images": "common_colorful.cell_image_panel"
+  },
+
+  "right_panel@common.root_panel": {
+    "layer": 1,
+    "controls": [
+      {
+        "common_panel@common.common_panel": {
+          "$show_close_button": false,
+          "$dialog_background": "common_colorful.inventory_background"
+        }
+      },
+      {
+        "loom_screen_inventory": {
+          "type": "panel",
+          "layer": 2,
+          "controls": [
+            {
+              "loom_label@loom.loom_label": {
+                "offset": [ 0, 5 ]
+              }
+            },
+            { "top_half_panel@loom.top_half_panel": {} },
+            { "inventory_panel_bottom_half_with_label@common_colorful.inventory_panel_bottom_half_with_label": {} },
+            { "hotbar_grid@common_colorful.hotbar_grid_template": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "center_fold/center_bg": {
+    "color": "$server_theme_ui_color"
+  }
+}

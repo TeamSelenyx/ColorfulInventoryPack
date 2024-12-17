@@ -1,0 +1,11 @@
+{
+  // Default Theme Color: [ 0.529, 0.808, 0.980 ]
+  // BlockFarm Theme Color: [ 0.85, 0.55, 0.38 ]
+  // Pantone Color 2025 - Moca Musse [ 0.643, 0.471, 0.392 ]
+
+  // Server Theme Colors
+  "$server_theme_ui_color": [ 0.643, 0.471, 0.392 ],
+  "$server_theme_title_color": [ 1.0, 1.0, 1.0 ],
+  "$server_theme_slot_icon_color": [ 0.5, 0.5, 0.5 ],
+  "$server_theme_close_button_color": [ 1.0, 1.0, 1.0 ]
+}

@@ -1,0 +1,357 @@
+{
+  "namespace": "crafting",
+
+  //---------------------------------------------------------------------------
+  // Inventory Label
+  //---------------------------------------------------------------------------
+  "crafting_label": {
+    "color": "$server_theme_title_color"
+  },
+
+  "inventory_label": {
+    "color": "$server_theme_title_color"
+  },
+
+  "creative_label": {
+    "color": "$server_theme_title_color"
+  },
+
+
+  //---------------------------------------------------------------------------
+  // Cell Image
+  //---------------------------------------------------------------------------
+  "cell_image": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "recipe_container_cell_images": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "cell_image_recipe_default": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "cell_image_recipe_group_item": {
+    "color": "$server_theme_ui_color"
+  },
+
+
+  //---------------------------
+  // Tab
+  //---------------------------
+  "colorful_tab_image@common_tabs.tab_image": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "tab_panel@common_tabs.tab_panel": {
+    "$tab_image|default": "crafting.colorful_tab_image"
+  },
+
+  "top_tab@common_tabs.tab_top": {
+    "$tab_panel": "crafting.tab_panel"
+  },
+
+
+  "layout_toggle": {
+    "$default_texture_color": "$server_theme_ui_color",
+    "$default_checked_texture_color": "$server_theme_ui_color",
+    "$hover_texture_color": "$server_theme_ui_color",
+    "$hover_checked_texture_color": "$server_theme_ui_color"
+  },
+
+  "toolbar_background": {
+    "color": "$server_theme_ui_color"
+  },
+
+
+  //---------------------------
+  // Recipe Inventory
+  //---------------------------
+  "recipe_book/bg": {
+    "$dialog_background": "common_colorful.inventory_background"
+  },
+
+  "recipe_book_scroll_panel": {
+    "$scroll_background_image_control": "crafting.recipe_book_custom_background"
+  },
+
+  "creative_hotbar_panel/creative_hotbar_background/hotbar_grid": {
+    "visible": false
+  },
+
+  "creative_hotbar_panel/creative_hotbar_background": {
+    "size": [ "100%cm + 12px", "100%cm + 10px" ],
+    "color": "$server_theme_ui_color",
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": [
+          {
+            "colorful_hotbar_grid@crafting.creative_colorful_hotbar_grid": {}
+          }
+        ]
+      }
+    ]
+  },
+
+  "center_fold/center_bg": {
+    "color": "$server_theme_ui_color"
+  },
+
+
+  "creative_colorful_hotbar_grid@common_colorful.hotbar_grid_template": {
+    "offset": [ 0, -6 ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+
+    "$button_ref": "crafting.creative_hotbar_container_slot_button",
+    "$background_images": "common_colorful.container_cell_images"
+  },
+
+  "creative_hotbar_with_background": {
+    "layer": 4,
+    "type": "image",
+    "size": [ "100%sm", "100%sm" ],
+    "offset": [ 0, -1 ],
+    "texture": "textures/ui/hotbar_background"
+  },
+
+  "recipe_book_custom_background": {
+    "layer": 2,
+    "type": "image",
+    "texture": "textures/ui/recipe_book_pane_bg",
+    "color": "$server_theme_ui_color"
+  },
+
+
+  //---------------------------
+  // Player Inventory
+  //---------------------------
+  "player_inventory": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": [
+          {
+            "colorful_inventory_panel_bottom_half@common_colorful.inventory_panel_bottom_half": {
+              "layer": 2,
+              "$button_ref": "crafting.inventory_container_slot_button",
+              "$background_images": "common_colorful.container_cell_images"
+            }
+          },
+          {
+            "colorful_hotbar_grid@common_colorful.hotbar_grid_template": {
+              "layer": 2,
+              "$button_ref": "crafting.inventory_container_slot_button",
+              "$background_images": "common_colorful.container_cell_images"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "player_inventory/common_panel": {
+    "$dialog_background": "common_colorful.inventory_background"
+  },
+
+  "player_inventory/inventory_panel_bottom_half": {
+    "visible": false
+  },
+
+  "player_inventory/hotbar_grid": {
+    "visible": false
+  },
+
+  "player_armor_panel": {
+    "type": "panel",
+    "size": [ 88, 83 ],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "controls": [
+      {
+        "player_bg": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "size": [ 52, 70 ],
+          "layer": 2,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 26, 8 ],
+          "controls": [
+            {
+              "player_renderer_panel": {
+                "type": "panel",
+                "size": [ 30, 30 ],
+                "offset": [ 0, -14 ],
+
+                "controls": [
+                  {
+                    "player_renderer": {
+                      "type": "custom",
+                      "renderer": "live_player_renderer",
+                      "property_bag": {
+                        "#look_at_cursor": true
+                      },
+                      "animation_reset_name": "screen_animation_reset",
+                      "anims": [
+                        "@common.screen_exit_size_animation_push",
+                        "@common.screen_exit_size_animation_pop",
+                        "@common.screen_entrance_size_animation_push",
+                        "@common.screen_entrance_size_animation_pop"
+                      ],
+                      "layer": 8,
+                      "anchor_from": "center",
+                      "anchor_to": "center"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "player_preview_border": {
+          "type": "image",
+          "texture": "textures/ui/player_preview_border",
+          "size": [ 54, 72 ],
+          "layer": 1,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 25, 7 ],
+          "color": "$server_theme_ui_color"
+        }
+      },
+      {
+        "armor_grid": {
+          "type": "grid",
+          "layer": 1,
+          "size": [ 18, 72 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 7, 7 ],
+          "grid_dimensions": [ 1, 4 ],
+          "$item_collection_name": "armor_items",
+          "collection_name": "$item_collection_name",
+          "controls": [
+            {
+              "head_grid_item@common_colorful.container_item": {
+                "grid_position": [ 0, 0 ],
+                "$cell_overlay_ref": "crafting.armor_overlay_helmet",
+                "$button_ref": "crafting.no_coalesce_container_slot_button",
+                "$background_images": "common_colorful.container_cell_images",
+
+                "$focus_id_binding_type": "none",
+                "$focus_id": "armor_item_head",
+
+                "$focus_override_right_binding_type": "none",
+                "$focus_override_right": "crafting_input_top_left"
+              }
+            },
+            {
+              "chest_grid_item@common_colorful.container_item": {
+                "grid_position": [ 0, 1 ],
+                "$cell_overlay_ref": "crafting.armor_overlay_chest",
+                "$button_ref": "crafting.no_coalesce_container_slot_button",
+                "$background_images": "common_colorful.container_cell_images",
+
+                "$focus_id_binding_type": "none",
+                "$focus_id": "armor_item_chest",
+
+                "$focus_override_right_binding_type": "none",
+                "$focus_override_right": "crafting_input_top_left"
+              }
+            },
+            {
+              "legs_grid_item@common_colorful.container_item": {
+                "grid_position": [ 0, 2 ],
+                "$cell_overlay_ref": "crafting.armor_overlay_legs",
+                "$button_ref": "crafting.no_coalesce_container_slot_button",
+                "$background_images": "common_colorful.container_cell_images",
+
+                "$focus_id_binding_type": "none",
+                "$focus_id": "armor_item_legs",
+
+                "$focus_override_right_binding_type": "none",
+                "$focus_override_right": "crafting_input_mid_left"
+              }
+            },
+            {
+              "feet_grid_item@common_colorful.container_item": {
+                "grid_position": [ 0, 3 ],
+                "$cell_overlay_ref": "crafting.armor_image_feet",
+                "$button_ref": "crafting.no_coalesce_container_slot_button",
+                "$background_images": "common_colorful.container_cell_images",
+
+                "$focus_id_binding_type": "none",
+                "$focus_id": "armor_item_feet",
+
+                "$focus_override_right_binding_type": "none",
+                "$focus_override_right": "offhand_items0"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "offhand_grid": {
+          "type": "grid",
+          "layer": 1,
+          "size": [ 18, 18 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 79, 61 ],
+          "grid_dimensions": [ 1, 1 ],
+          "$item_collection_name": "offhand_items",
+          "collection_name": "$item_collection_name",
+          "controls": [
+            {
+              "offhand_grid_item@common_colorful.container_item": {
+                "grid_position": [ 0, 0 ],
+                "$cell_overlay_ref": "crafting.armor_overlay_shield",
+                "$button_ref": "crafting.no_coalesce_container_slot_button",
+                "$background_images": "common_colorful.container_cell_images",
+
+                "$focus_override_left_binding_type": "none",
+                "$focus_override_left": "armor_item_feet"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+
+  //---------------------------
+  // Container Item
+  //---------------------------
+  "inventory_container_item": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": [
+          {
+            "colorful_slot_select@common_colorful.slot_selected": { "layer": 4 }
+          },
+          {
+            "colorful_cell_image@common_colorful.item_lock_cell_image": { "layer": 2 }
+          }
+        ]
+      }
+    ]
+  },
+
+  "inventory_container_item/item_selected_image": {
+    "visible": false
+  },
+
+  "inventory_container_item/item_lock_cell_image": {
+    "visible": false
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "namespace": "cartography",
+
+  "title_label": {
+    "color": "$server_theme_title_color"
+  },
+
+  "text_edit_control": {
+    "$text_background_default": "common_colorful.edit_box_indent",
+    "$text_background_hover": "common_colorful.edit_box_indent_hover"
+  },
+
+  "cartography_item_slot": {
+    "type": "panel",
+    "size": [ "100%c", "100%c" ],
+    "controls": [
+      {
+        "container_item@common_colorful.container_item": {
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "$background_images": "common_colorful.cell_image_panel"
+        }
+      }
+    ]
+  },
+
+  "text_box_panel/map_name_label": {
+    "color": "$server_theme_title_color"
+  },
+
+  "output_description_label": {
+    "color": "$server_theme_title_color"
+  },
+
+  "cartography_panel": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+      { "selected_item_details_factory@common.selected_item_details_factory": {} },
+      { "item_lock_notification_factory@common.item_lock_notification_factory": {} },
+      {
+        "root_panel@common.root_panel": {
+          "size": [ "100% - 44px", "100%" ],
+          "max_size": [ 176, 220 ],
+          "layer": 1,
+          "$show_close_button": false,
+          "controls": [
+            { "common_panel@common.common_panel": { "$dialog_background": "common_colorful.inventory_background" } },
+            {
+              "cartography_screen_inventory": {
+                "type": "panel",
+                "layer": 2,
+                "controls": [
+                  { "top_half_panel@cartography.top_half_panel": {} },
+                  { "inventory_panel_bottom_half_with_label@common_colorful.inventory_panel_bottom_half_with_label": {} },
+                  { "hotbar_grid@common_colorful.hotbar_grid_template": {} },
+                  { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }
+                ]
+              }
+            },
+            { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+            { "gamepad_cursor@common.gamepad_cursor_button": {} },
+            {
+              "tab_close_and_help_button@common_tabs.tab_close_and_help_button": {
+                "anchor_from": "top_right",
+                "anchor_to": "top_left",
+                "size": [ 26, "100%c + 7px" ],
+                "offset": [ -4, 0 ],
+                "color": "$server_theme_ui_color"
+              }
+            }
+          ]
+        }
+      },
+      { "flying_item_renderer@common.flying_item_renderer": { "layer": 15 } }
+    ]
+  }
+}

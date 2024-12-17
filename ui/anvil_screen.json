@@ -1,0 +1,119 @@
+{
+  "namespace": "anvil",
+
+  "title_label": {
+    "color": "$server_theme_title_color",
+    "shadow": true
+  },
+
+  "text_edit_control": {
+    "$text_background_default": "common_colorful.edit_box_indent",
+    "$text_background_hover": "common_colorful.edit_box_indent_hover"
+  },
+
+  "anvil_item_slot": {
+    "type": "panel",
+    "size": [ 18,18 ],
+    "controls": [
+      {
+        "container_item@common_colorful.container_item": {
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "$background_images": "common_colorful.cell_image_panel"
+        }
+      }
+    ]
+  },
+
+  "cost_label@anvil.generic_label": {
+    "layer": 2,
+    "shadow": true,
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "offset": [ 0, 0 ],
+    "color": "$anvil_cost_success_text_color",
+    "text": "#text",
+    "controls": [
+      {
+        "gray@resource_packs.gray_image": {
+          "layer": -1,
+          "size": [ "105%", "105%" ],
+          "alpha": 0.3
+        }
+      }
+    ]
+  },
+
+  "recipe_panel": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ "100%", "60%" ],
+    "offset": [ 0, "40%" ],
+    "controls": [
+      { "recipe_grid@anvil.recipe_grid": { } },
+      {
+        "cost_label_0@anvil.cost_label": {
+          "color": "$anvil_cost_fail_text_color",
+          "bindings": [
+            {
+              "binding_name": "#cost_text",
+              "binding_name_override": "#text"
+            },
+            {
+              "binding_name": "#cost_text_red",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "cost_label_1@anvil.cost_label": {
+          "color": "$anvil_cost_success_text_color",
+          "bindings": [
+            {
+              "binding_name": "#cost_text",
+              "binding_name_override": "#text"
+            },
+            {
+              "binding_name": "#cost_text_green",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "anvil_panel": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+      { "selected_item_details_factory@common.selected_item_details_factory": {} },
+      { "item_lock_notification_factory@common.item_lock_notification_factory": {} },
+      {
+        "root_panel@common.root_panel": {
+          "layer": 1,
+          "controls": [
+            { "common_panel@common.common_panel": { "$dialog_background": "common_colorful.inventory_background" } },
+            {
+              "anvil_screen_inventory": {
+                "type": "panel",
+                "layer": 2,
+                "controls": [
+                  { "top_half_panel@anvil.top_half_panel": {} },
+                  { "inventory_panel_bottom_half_with_label@common_colorful.inventory_panel_bottom_half_with_label": {} },
+                  { "hotbar_grid@common_colorful.hotbar_grid_template": {} },
+                  { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }
+                ]
+              }
+            },
+            { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+            { "gamepad_cursor@common.gamepad_cursor_button": {} }
+          ]
+        }
+      },
+      { "flying_item_renderer@common.flying_item_renderer": { "layer": 12 } }
+    ]
+  }
+}

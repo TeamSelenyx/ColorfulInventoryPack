@@ -1,0 +1,15 @@
+{
+  "namespace": "gameplay",
+
+  "bundle_selected_item_background/bundle_selected_item_background_colour_green": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "bundle_selected_item_background/bundle_selected_item_background_colour": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "bundle_selected_item_background/bundle_selected_item_frame": {
+    "color": "$server_theme_ui_color"
+  }
+}

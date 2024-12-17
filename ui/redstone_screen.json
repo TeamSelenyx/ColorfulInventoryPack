@@ -1,0 +1,263 @@
+{
+  "namespace": "redstone",
+
+  "item_dropper_label": {
+    "color": "$server_theme_title_color"
+  },
+
+  "redstone_input_grid_item@common_colorful.container_item": {
+    "$background_images": "common_colorful.cell_image_panel"
+  },
+
+  "redstone_input_grid": {
+    "type": "grid",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": "$grid_offset",
+    "grid_dimensions": "$grid_dimensions",
+    "collection_name": "container_items",
+    "grid_item_template": "redstone.redstone_input_grid_item",
+    "$item_collection_name": "container_items"
+  },
+
+  "panel": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+      { "selected_item_details_factory@common.selected_item_details_factory": {} },
+      { "item_lock_notification_factory@common.item_lock_notification_factory": {} },
+      {
+        "root_panel@common.root_panel": {
+          "layer": 1,
+          "size": "$screen_dimensions",
+          "controls": [
+            { "common_panel@common.common_panel": { "$dialog_background": "common_colorful.inventory_background" } },
+            {
+              "redstone_screen_inventory": {
+                "type": "panel",
+                "layer": 5,
+                "controls": [
+                  { "red_panel@redstone.redstone_panel_top_half": {} },
+                  { "red_bottom_half@common_colorful.inventory_panel_bottom_half_with_label": {} },
+                  { "hotbar_grid@common_colorful.hotbar_grid_template": {} },
+                  { "red_hold_icon@common.inventory_take_progress_icon_button": {} }
+                ]
+              }
+            },
+            { "red_icon@common.inventory_selected_icon_button": {} },
+            { "gamepad_cursor@common.gamepad_cursor_button": {} },
+            { "$screen_label@$screen_label": {} }
+          ]
+        }
+      },
+      { "flying_item_renderer@common.flying_item_renderer": { "layer": 21 } }
+    ]
+  },
+
+  "cell_image": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "crafter_highlight_slot_panel/highlight": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "crafter_highlight_slot_panel/white_border": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "crafter_enabled_slot_template@common_colorful.container_item": {
+    "$background_images|default": "redstone.cell_image",
+    "$button_ref|default": "redstone.crafter_container_slot_button_prototype"
+  },
+
+  "crafter_disabled_slot/default": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "crafter_disabled_slot/hover": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "crafter_disabled_slot/pressed": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "output_slot_hover_info/output_slot_border": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "panel_crafter": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+      { "selected_item_details_factory@common.selected_item_details_factory": {} },
+      { "item_lock_notification_factory@common.item_lock_notification_factory": {} },
+      {
+        "root_panel@common.root_panel": {
+          "layer": 1,
+          "size": "$screen_dimensions",
+          "controls": [
+            { "common_panel@common.common_panel": { "$dialog_background": "common_colorful.inventory_background" } },
+            {
+              "disabled_slot_0_button@redstone.crafter_disabled_slot": {
+                "offset": [ -53.9, -54.4 ],
+                "$pressed_button_name": "disabled_button0",
+                "bindings": [
+                  {
+                    "binding_name": "#button_visible0",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "disabled_slot_1_button@redstone.crafter_disabled_slot": {
+                "offset": [ -36, -54.4 ],
+                "$pressed_button_name": "disabled_button1",
+                "bindings": [
+                  {
+                    "binding_name": "#button_visible1",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "disabled_slot_2_button@redstone.crafter_disabled_slot": {
+                "offset": [ -18, -54.4 ],
+                "$pressed_button_name": "disabled_button2",
+                "bindings": [
+                  {
+                    "binding_name": "#button_visible2",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "disabled_slot_3_button@redstone.crafter_disabled_slot": {
+                "offset": [ -53.9, -36.4 ],
+                "$pressed_button_name": "disabled_button3",
+                "bindings": [
+                  {
+                    "binding_name": "#button_visible3",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "disabled_slot_4_button@redstone.crafter_disabled_slot": {
+                "offset": [ -36, -36.4 ],
+                "$pressed_button_name": "disabled_button4",
+                "bindings": [
+                  {
+                    "binding_name": "#button_visible4",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "disabled_slot_5_button@redstone.crafter_disabled_slot": {
+                "offset": [ -18, -36.4 ],
+                "$pressed_button_name": "disabled_button5",
+                "bindings": [
+                  {
+                    "binding_name": "#button_visible5",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "disabled_slot_6_button@redstone.crafter_disabled_slot": {
+                "offset": [ -53.9, -18.5 ],
+                "$pressed_button_name": "disabled_button6",
+                "bindings": [
+                  {
+                    "binding_name": "#button_visible6",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "disabled_slot_7_button@redstone.crafter_disabled_slot": {
+                "offset": [ -36, -18.5 ],
+                "$pressed_button_name": "disabled_button7",
+                "bindings": [
+                  {
+                    "binding_name": "#button_visible7",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "disabled_slot_8_button@redstone.crafter_disabled_slot": {
+                "offset": [ -18, -18.5 ],
+                "$pressed_button_name": "disabled_button8",
+                "bindings": [
+                  {
+                    "binding_name": "#button_visible8",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "redstone_screen_inventory": {
+                "type": "panel",
+                "layer": 5,
+                "controls": [
+                  {
+                    "crafting_grid": {
+                      "type": "panel",
+                      "size": [ "100%", "50% - 12px" ],
+                      "offset": [ -36, 11 ],
+                      "anchor_to": "top_left",
+                      "anchor_from": "top_left",
+                      "controls": [
+                        {
+                          "crafter_input_grid@redstone.crafter_input_grid": {}
+                        }
+                      ]
+                    }
+                  },
+                  { "red_bottom_half@common_colorful.inventory_panel_bottom_half_with_label": {} },
+                  { "hotbar_grid@common_colorful.hotbar_grid_template": {} },
+                  { "red_hold_icon@common.inventory_take_progress_icon_button": {} },
+                  {
+                    "redstone_wire_line": {
+                      "type": "image",
+                      "layer": 3,
+                      "size": [ 18, 18 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [ 95, 38 ],
+                      "bindings": [
+                        {
+                          "binding_name": "#redstone_arrow_texture",
+                          "binding_name_override": "#texture"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "crafter_output@redstone.output_slot_hover_info": {}
+                  }
+                ]
+              }
+            },
+            { "red_icon@common.inventory_selected_icon_button": {} },
+            { "gamepad_cursor@common.gamepad_cursor_button": {} },
+            { "$screen_label@$screen_label": {} }
+          ]
+        }
+      },
+      { "flying_item_renderer@common.flying_item_renderer": { "layer": 15 } }
+    ]
+  }
+}
