@@ -1,8 +1,8 @@
 {
     "format_version": 2,
     "header": {
-        "name": "Colorful Inventory Pack(BETA)",
-        "description": "§cR§aG§9B§f 값을 이용해서 다양한 디자인의 보관함을 만들어보세요!\n§h[ Made & Designed by NeroLuna ]",
+        "name": "Colorful Inventory Pack",
+        "description": "§cR§aG§9B§f 값을 이용해서 다양한 디자인의 보관함을 만들어보세요!\n§h[ Made & Designed by NeroLuna with Team Selenyx ]",
         "uuid": "91eff0c8-f955-4313-8612-9a8165915af1",
         "version": [ 1, 0, 0 ],
         "min_engine_version": [ 1, 21, 50 ]
