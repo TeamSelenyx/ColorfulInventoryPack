@@ -10,6 +10,30 @@
     "color": "$server_theme_slot_icon_color"
   },
 
+  "dark_background": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "dark_background_with_hover_text": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "active_background": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "active_background_with_hover_text": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "success_runes": {
+    "color": "$server_theme_enchanting_runes_text_color"
+  },
+
+  "fail_runes": {
+    "color": "$server_theme_enchanting_runes_fail_text_color"
+  },
+
   "enchanting_panel_top_half": {
     "type": "panel",
     "size": [ "100%", "50% - 12px" ],
@@ -131,9 +155,84 @@
     ]
   },
 
+  "toolbar_background": {
+    "type": "image",
+    "texture": "textures/ui/toolbar_background",
+    "color": "$server_theme_ui_color"
+  },
+
+  "toolbar_panel@common.root_panel": {
+    "size": [ "100%c", 20 ],
+    "controls": [
+      {
+        "toolbar_background@enchanting.toolbar_background": {
+          "size": [ "100%cm", "100% + 8px" ],
+          "offset": [ 0, -5 ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "controls": [
+            {
+              "toolbar_stack_panel": {
+                "type": "stack_panel",
+                "size": [ "default", "100% - 8px" ],
+                "offset": [ 0, 3 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "orientation": "horizontal",
+                "controls": [
+                  {
+                    "padding_1": { "type": "panel", "size": [ 6, 0 ] }
+                  },
+                  {
+                    "close_button_panel": {
+                      "type": "panel",
+                      "size": [ "100%c", "100%" ],
+                      "bindings": [
+                        {
+                          "binding_name": "#close_button_visible",
+                          "binding_name_override": "#visible"
+                        }
+                      ],
+                      "controls": [
+                        {
+                          "close_button@common_colorful.tab_close_button": {
+                            "size": [ "100%cm", "100%cm" ],
+                            "offset": [ 0, 0 ],
+                            "anchor_from": "center",
+                            "anchor_to": "center"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "padding_2": { "type": "panel", "size": [ 6, 0 ] }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "toolbar_anchor": {
+    "type": "panel",
+    "size": [ 176, 166 ],
+    "inherit_max_sibling_height": true,
+    "controls": [
+      {
+        "toolbar_panel@enchanting.toolbar_panel": {
+          "anchor_from": "top_right",
+          "anchor_to": "bottom_right"
+        }
+      }
+    ]
+  },
+
   "enchanting_panel": {
     "type": "panel",
-    "$use_compact_close_button": true,
     "controls": [
       { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
       { "selected_item_details_factory@common.selected_item_details_factory": {} },
@@ -142,7 +241,11 @@
         "root_panel@common.root_panel": {
           "layer": 1,
           "controls": [
-            { "common_panel@common.common_panel": { "$dialog_background": "common_colorful.inventory_background" } },
+            {
+              "common_panel@common_colorful.common_panel": {
+                "$show_close_button": false
+              }
+            },
             {
               "enchanting_screen_inventory": {
                 "type": "panel",
@@ -156,6 +259,7 @@
               }
             },
             { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+            { "toolbar_anchor@enchanting.toolbar_anchor": {} },
             { "gamepad_cursor@common.gamepad_cursor_button": {} }
           ]
         }

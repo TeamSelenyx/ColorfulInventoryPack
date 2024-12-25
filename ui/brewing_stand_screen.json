@@ -88,7 +88,7 @@
         "root_panel@common.root_panel": {
           "layer": 1,
           "controls": [
-            { "common_panel@common.common_panel": { "$dialog_background": "common_colorful.inventory_background" } },
+            { "common_panel@common_colorful.common_panel": {} },
             {
               "furnace_screen_inventory": {
                 "type": "panel",

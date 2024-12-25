@@ -5,6 +5,10 @@
     "color": "$server_theme_title_color"
   },
 
+  "arrow_icon": {
+    "color": "$server_theme_ui_color"
+  },
+
   "stone_cell_image": {
     "color": "$server_theme_ui_color"
   },
@@ -50,13 +54,77 @@
     "$background_images": "common_colorful.cell_image_panel"
   },
 
+  "toolbar_panel@common.root_panel": {
+    "size": [ "100%c", 20 ],
+    "controls": [
+      {
+        "toolbar_background@stonecutter.toolbar_background": {
+          "size": [ "100%cm", "100% + 8px" ],
+          "offset": [ 0, -3 ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+
+          "controls": [
+            {
+              "toolbar_stack_panel": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+
+                "size": [ "default", "100% - 8px" ],
+                "offset": [ 0, 3 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+
+                "controls": [
+                  {
+                    "padding_1": {
+                      "type": "panel",
+                      "size": [ 6, 0 ]
+                    }
+                  },
+                  {
+                    "close_button_panel": {
+                      "type": "panel",
+                      "size": [ "100%c", "100%" ],
+                      "controls": [
+                        {
+                          "close_button@common_colorful.tab_close_button": {
+                            "size": [ "100%cm", "100%cm" ],
+                            "offset": [ 0, 0 ],
+                            "anchor_from": "center",
+                            "anchor_to": "center"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "padding_2": {
+                      "type": "panel",
+                      "size": [ 6, 0 ]
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#close_button_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
   "right_panel@common.root_panel": {
     "layer": 1,
     "controls": [
       {
-        "common_panel@common.common_panel": {
-          "$show_close_button": false,
-          "$dialog_background": "common_colorful.inventory_background"
+        "common_panel@common_colorful.common_panel": {
+          "$show_close_button": false
         }
       },
       {

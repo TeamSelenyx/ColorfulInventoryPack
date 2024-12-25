@@ -5,6 +5,14 @@
     "color": "$server_theme_title_color"
   },
 
+  "arrow_icon": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "plus_sign_icon": {
+    "color": "$server_theme_ui_color"
+  },
+
   "text_edit_control": {
     "$text_background_default": "common_colorful.edit_box_indent",
     "$text_background_hover": "common_colorful.edit_box_indent_hover"
@@ -32,6 +40,29 @@
     "color": "$server_theme_title_color"
   },
 
+  "tab_close_and_help_button": {
+    "type": "image",
+    "size": [ "100%", "100%c + 7px" ],
+    "texture": "textures/ui/TabRightBackTopMost",
+
+    "controls": [
+      {
+        "close_button@common_colorful.tab_close_button": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [ 0, 4 ]
+        }
+      },
+      {
+        "help_button@common_colorful.help_button": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, -6 ]
+        }
+      }
+    ]
+  },
+
   "cartography_panel": {
     "type": "panel",
     "controls": [
@@ -45,7 +76,7 @@
           "layer": 1,
           "$show_close_button": false,
           "controls": [
-            { "common_panel@common.common_panel": { "$dialog_background": "common_colorful.inventory_background" } },
+            { "common_panel@common_colorful.common_panel": {} },
             {
               "cartography_screen_inventory": {
                 "type": "panel",

@@ -11,5 +11,115 @@
 
   "bundle_selected_item_background/bundle_selected_item_frame": {
     "color": "$server_theme_ui_color"
+  },
+
+  "bundle_cell_image/background_panel/item_background": {
+    "texture": "textures/ui/bundle_grey_item_background",
+    "color": "$server_theme_ui_color"
+  },
+
+  "bundle_cell_image/highlight_panel/bundle_selected_item_background_colour_green": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "bundle_cell_image/highlight_panel/bundle_selected_item_background_border_white": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "bundle_cell_image/highlight_panel/bundle_selected_item_background_colour_blue": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "bundle_tooltip/background": {
+    "texture": "textures/ui/darkGreyBorder",
+    "color": "$server_theme_ui_color"
+  },
+
+  "bundle_tooltip/wrapper/vertical_layout_stack/horisontal_layout_stack/body_stack/info_message": {
+    "color": "$server_theme_sub_title_color"
+  },
+
+  "bundle_tooltip/header_stack": {
+    "controls": [
+      {
+        "bundle_label": {
+          "type": "label",
+          "color": "$main_header_text_color",
+          "min_size": "$bundle_label_size",
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "text": "#bundle_name",
+          "bindings": [
+            {
+              "binding_name": "#bundle_name",
+              "binding_condition": "visible"
+            }
+          ],
+          "variables": [
+            {
+              "requires": "$desktop_screen",
+              "$bundle_label_size": [ 77, "default" ]
+            },
+            {
+              "requires": "$pocket_screen",
+              "$bundle_label_size": [ 117, "default" ]
+            }
+          ]
+        }
+      },
+      {
+        "close_button@common_colorful.close_button": {
+          "$pressed_button_name": "button.hide_bundle_tooltip",
+          "size": [ 8, 8 ],
+          "layer": 2,
+          "button_mappings": [
+            {
+              "to_button_id": "$pressed_button_name",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "$pressed_button_name",
+              "mapping_type": "focused"
+            },
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "$pressed_button_name",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_up",
+              "to_button_id": "$pressed_button_name",
+              "mapping_type": "global"
+            }
+          ],
+          "controls": [
+            {
+              "default@common_colorful.close_button_panel": {
+                "$close_button_texture": "textures/ui/close_button_default_light",
+                "$button_alpha": "$default_button_alpha"
+              }
+            },
+            {
+              "hover@common_colorful.close_button_panel": {
+                "$close_button_texture": "textures/ui/close_button_hover_light"
+              }
+            },
+            {
+              "pressed@common_colorful.close_button_panel": {
+                "$close_button_texture": "textures/ui/close_button_pressed_light"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#show_bundle_tooltip_pocket",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
   }
 }

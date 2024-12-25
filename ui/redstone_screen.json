@@ -31,7 +31,7 @@
           "layer": 1,
           "size": "$screen_dimensions",
           "controls": [
-            { "common_panel@common.common_panel": { "$dialog_background": "common_colorful.inventory_background" } },
+            { "common_panel@common_colorful.common_panel": {} },
             {
               "redstone_screen_inventory": {
                 "type": "panel",
@@ -98,7 +98,7 @@
           "layer": 1,
           "size": "$screen_dimensions",
           "controls": [
-            { "common_panel@common.common_panel": { "$dialog_background": "common_colorful.inventory_background" } },
+            { "common_panel@common_colorful.common_panel": {} },
             {
               "disabled_slot_0_button@redstone.crafter_disabled_slot": {
                 "offset": [ -53.9, -54.4 ],
@@ -237,6 +237,7 @@
                       "anchor_from": "top_left",
                       "anchor_to": "top_left",
                       "offset": [ 95, 38 ],
+                      "color": "$server_theme_ui_color",
                       "bindings": [
                         {
                           "binding_name": "#redstone_arrow_texture",

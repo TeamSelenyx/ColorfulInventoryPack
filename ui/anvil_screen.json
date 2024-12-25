@@ -2,13 +2,20 @@
   "namespace": "anvil",
 
   "title_label": {
-    "color": "$server_theme_title_color",
-    "shadow": true
+    "color": "$server_theme_title_color"
   },
 
   "text_edit_control": {
     "$text_background_default": "common_colorful.edit_box_indent",
     "$text_background_hover": "common_colorful.edit_box_indent_hover"
+  },
+
+  "plus_sign_icon": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "arrow_icon": {
+    "color": "$server_theme_ui_color"
   },
 
   "anvil_item_slot": {
@@ -95,7 +102,7 @@
         "root_panel@common.root_panel": {
           "layer": 1,
           "controls": [
-            { "common_panel@common.common_panel": { "$dialog_background": "common_colorful.inventory_background" } },
+            { "common_panel@common_colorful.common_panel": {} },
             {
               "anvil_screen_inventory": {
                 "type": "panel",

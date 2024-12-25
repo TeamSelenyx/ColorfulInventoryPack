@@ -42,9 +42,8 @@
           "layer": 1,
           "controls": [
             {
-              "common_panel@common.common_panel": {
-                "$use_compact_close_button": true,
-                "$dialog_background": "common_colorful.inventory_background"
+              "common_panel@common_colorful.common_panel": {
+                "$use_compact_close_button": true
               }
             },
 

@@ -3,8 +3,7 @@
 
   // Chest Screen
   "chest_label": {
-    "color": "$server_theme_title_color",
-    "shadow": true
+    "color": "$server_theme_title_color"
   },
 
   "chest_grid_item@common_colorful.container_item": {
@@ -24,7 +23,7 @@
         "root_panel@common.root_panel": {
           "layer": 1,
           "controls": [
-            { "common_panel@common.common_panel": { "$dialog_background": "common_colorful.inventory_background" } },
+            { "common_panel@common_colorful.common_panel": {} },
             {
               "chest_panel": {
                 "type": "panel",
@@ -57,7 +56,7 @@
           "size": [ 176, 220 ],
           "layer": 1,
           "controls": [
-            { "common_panel@common.common_panel": { "$dialog_background": "common_colorful.inventory_background" } },
+            { "common_panel@common_colorful.common_panel": {} },
             {
               "chest_panel": {
                 "type": "panel",

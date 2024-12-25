@@ -2,21 +2,43 @@
     "format_version": 2,
     "header": {
         "name": "Colorful Inventory Pack",
-        "description": "§cR§aG§9B§f 값을 이용해서 다양한 디자인의 보관함을 만들어보세요!\n§h[ Made & Designed by NeroLuna with Team Selenyx ]",
+        "description": "§cR§aG§9B§f 값을 이용해서 다양한 디자인의 보관함을 만들어보세요!\n§7[ Made & Designed by §iNeroLuna§7 with §hTeam Selenyx§7 ]",
         "uuid": "91eff0c8-f955-4313-8612-9a8165915af1",
-        "version": [ 1, 0, 0 ],
+        "version": [ 1, 1, 0 ],
         "min_engine_version": [ 1, 21, 50 ]
     },
     "modules": [
         {
             "type": "resources",
             "uuid": "d38606ac-bbe1-4c91-97e6-273bf5f06736",
-            "version": [ 1, 0, 0 ]
+            "version": [ 1, 1, 0 ]
         }
     ],
     "metadata": {
-        "authors": [ "네로 루나" ]
+        "authors": [ "NeroLuna" ]
     },
+	"subpacks": [
+		{
+			"folder_name": "nerolunaPick",
+			"name": "NeroLuna Pick Color - 진회색(Dark Gray)\n§7 - RGB: [ 64, 64, 64 ]\n - 변환: [ 0.247, 0.247, 0.247 ]",
+			"memory_tier": 0
+		},
+		{
+			"folder_name": "pantone2022",
+			"name": "Pantone 2022 Color - 베리 페리(Very Peri)\n§7 - RGB: [ 102, 103, 171 ]\n - 변환: [ 0.4, 0.404, 0.671 ]",
+			"memory_tier": 0
+		},
+		{
+			"folder_name": "pantone2025",
+			"name": "Pantone 2025 Color - 모카 무스(Mocha Mousse)\n§7 - RGB: [ 164, 120, 100 ]\n - 변환: [ 0.643, 0.471, 0.392 ]",
+			"memory_tier": 0
+		},
+		{
+			"folder_name": "default",
+			"name": "Default Color - 기본 색상\n§7 - RGB: [ 255, 255, 255 ]\n - 변환: [ 1.0, 1.0, 1.0 ]",
+			"memory_tier": 0
+		}
+	],
     "settings": [
         {
             "type": "label",
@@ -24,15 +46,19 @@
         },
         {
             "type": "label",
-            "text": " * 각각의 RGB 값을 255로 나누면 나오는 값을 넣으시면 됩니다."
-        },
-        {
-            "type": "label",
-            "text": " * 예시: [ 255, 255, 255 ] -> [ 1.0, 1.0, 1.0 ]"
-        },
-        {
-            "type": "label",
             "text": " * (리소스 팩 수정 및 공유 시 반드시 원 제작자의 표시를 필수로 기재해주시기 바랍니다.)"
+        },
+        {
+            "type": "label",
+            "text": " * 색상 변경 방법"
+        },
+        {
+            "type": "label",
+            "text": "  - 각각의 RGB 값을 255로 나누면 나오는 값을 넣으시면 됩니다."
+        },
+        {
+            "type": "label",
+            "text": "  - 예시: [ 255, 255, 255 ] -> [ 1.0, 1.0, 1.0 ]"
         }
     ]
 }

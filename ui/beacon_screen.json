@@ -16,7 +16,7 @@
           "layer": 1,
           "size": [ 256, 219 ],
           "controls": [
-            { "common_panel@common.common_panel": { "$dialog_background": "common_colorful.inventory_background" } },
+            { "common_panel@common_colorful.common_panel": {} },
             {
               "beacon_inventory": {
                 "type": "panel",
@@ -158,11 +158,11 @@
   },
 
   "beacon_label": {
-    "color": "$server_theme_title_color",
-    "shadow": true
+    "color": "$server_theme_sub_title_color"
   },
 
   "beacon_inner_panel": {
+    "texture": "textures/ui/darkGreyBorder",
     "color": "$server_theme_ui_color"
   },
 

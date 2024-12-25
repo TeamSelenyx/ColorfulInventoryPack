@@ -1,9 +1,21 @@
 {
   "namespace": "furnace",
 
+  "furnace_arrow_empty_image": {
+    "texture": "textures/ui/arrow_large",
+    "color": "$server_theme_ui_color"
+  },
+
+  "furnace_arrow_full_image": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "flame_empty_image": {
+    "color": "$server_theme_ui_color"
+  },
+
   "furnace_label": {
-    "color": "$server_theme_title_color",
-    "shadow": true
+    "color": "$server_theme_title_color"
   },
 
   "furnace_ingredient_panel": {
@@ -76,7 +88,7 @@
         "root_panel@common.root_panel": {
           "layer": 1,
           "controls": [
-            { "common_panel@common.common_panel": { "$dialog_background": "common_colorful.inventory_background" } },
+            { "common_panel@common_colorful.common_panel": {} },
             {
               "furnace_screen_inventory": {
                 "type": "panel",

@@ -18,6 +18,19 @@
 
 
   //---------------------------------------------------------------------------
+  // Inventory Icon
+  //---------------------------------------------------------------------------
+  "crafting_arrow": {
+    "color": "$server_theme_ui_color"
+  },
+
+  "crafting_arrow_large": {
+    "color": "$server_theme_ui_color"
+  },
+
+
+
+  //---------------------------------------------------------------------------
   // Cell Image
   //---------------------------------------------------------------------------
   "cell_image": {
@@ -50,6 +63,11 @@
 
   "top_tab@common_tabs.tab_top": {
     "$tab_panel": "crafting.tab_panel"
+  },
+
+  "tab_content/tab_content_search_bar_panel/search_and_filter_panel/text_edit_control": {
+    "$text_background_default": "common_colorful.edit_box_indent",
+    "$text_background_hover": "common_colorful.edit_box_indent_hover"
   },
 
 
@@ -324,6 +342,14 @@
         }
       }
     ]
+  },
+
+  "armor_overlay": {
+    "color": "$server_theme_slot_icon_color"
+  },
+
+  "offhand_overlay": {
+    "color": "$server_theme_slot_icon_color"
   },
 
 

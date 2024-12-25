@@ -5,6 +5,10 @@
     "color": "$server_theme_title_color"
   },
 
+  "arrow_icon": {
+    "color": "$server_theme_ui_color"
+  },
+
   "grindstone_item_slot": {
     "type": "panel",
     "size": [ "100%c", "100%c" ],
@@ -29,7 +33,7 @@
         "root_panel@common.root_panel": {
           "layer": 1,
           "controls": [
-            { "common_panel@common.common_panel": { "$dialog_background": "common_colorful.inventory_background" } },
+            { "common_panel@common_colorful.common_panel": {} },
             {
               "grindstone_screen_inventory": {
                 "type": "panel",
