@@ -4,14 +4,14 @@
         "name": "Colorful Inventory Pack",
         "description": "§cR§aG§9B§f 값을 이용해서 다양한 디자인의 보관함을 만들어보세요!\n§7[ Made & Designed by §iNeroLuna§7 with §hTeam Selenyx§7 ]",
         "uuid": "91eff0c8-f955-4313-8612-9a8165915af1",
-        "version": [ 1, 1, 0 ],
-        "min_engine_version": [ 1, 21, 50 ]
+        "version": [ 1, 2, 0 ],
+        "min_engine_version": [ 1, 21, 80 ]
     },
     "modules": [
         {
             "type": "resources",
             "uuid": "d38606ac-bbe1-4c91-97e6-273bf5f06736",
-            "version": [ 1, 1, 0 ]
+            "version": [ 1, 2, 0 ]
         }
     ],
     "metadata": {
@@ -19,8 +19,13 @@
     },
 	"subpacks": [
 		{
-			"folder_name": "nerolunaPick",
-			"name": "NeroLuna Pick Color - 진회색(Dark Gray)\n§7 - RGB: [ 64, 64, 64 ]\n - 변환: [ 0.247, 0.247, 0.247 ]",
+			"folder_name": "nerolunaPick2",
+			"name": "NeroLuna Pick Color 2 - 시안 파스텔(Cyan Pastel)\n§7 - RGB: [ 143, 202, 202 ]\n - 변환: [ 0.56, 0.792, 0.792 ]",
+			"memory_tier": 0
+		},
+		{
+			"folder_name": "nerolunaPick1",
+			"name": "NeroLuna Pick Color 1 - 진회색(Dark Gray)\n§7 - RGB: [ 64, 64, 64 ]\n - 변환: [ 0.247, 0.247, 0.247 ]",
 			"memory_tier": 0
 		},
 		{

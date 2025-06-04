@@ -84,13 +84,53 @@
 
 
   //---------------------------
+  // Scroll Panel
+  //---------------------------
+  "scroll_panel@common_colorful.container_scroll_panel": {
+    "$scrolling_panel_base_button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.destroy_selection",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_secondary_select",
+        "to_button_id": "button.container_reset_held",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.destroy_selection",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_back",
+        "to_button_id": "button.destroy_selection",
+        "mapping_type": "pressed",
+        "ignored": "(not $is_ps4)"
+      },
+      {
+        "from_button_id": "button.controller_select",
+        "to_button_id": "button.clear_hotbar_or_remove_one",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_secondary_select",
+        "to_button_id": "button.container_reset_held",
+        "mapping_type": "pressed"
+      }
+    ]
+  },
+
+
+  //---------------------------
   // Recipe Inventory
   //---------------------------
   "recipe_book/bg": {
     "$dialog_background": "common_colorful.inventory_background"
   },
 
-  "recipe_book_scroll_panel": {
+  "recipe_book_scroll_panel@crafting.colorful_scroll_panel": {
     "$scroll_background_image_control": "crafting.recipe_book_custom_background"
   },
 
